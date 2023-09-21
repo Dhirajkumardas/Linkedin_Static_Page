@@ -1,0 +1,611 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    color: black; /*all anchor tags color black*/
+}
+
+/* Body  */
+body {
+    background-color: rgb(243, 242, 240);
+}
+
+/* Nav bar */
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 02px 180px 2px 180px;
+    display: flex;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+}
+
+.sec1 {/*Nav Section1 Left Side*/
+    width: 400px;
+    display: flex;
+}
+
+img {/*LinkedIn Logo */
+    position: relative;
+    top: 5px;
+}
+nav .sec1 img:hover{
+    cursor: pointer;
+}
+
+.searchbar {/*Search Bar */
+    position: relative;
+    left: 5px;
+    height: 40px;
+    width: 70%;
+    top: 5px;
+    padding: 10px 10px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    background-color: rgb(237, 243, 248);
+    border-radius: 5px;
+}
+
+.searchbox {/*Search input Box */
+    border: none;
+    min-width: 50px;
+    background-color: rgb(237, 243, 248);
+    outline: none;
+    font-size: 15px;
+}
+/*Nav Section1 Ends */
+
+.sec2 {/* Nav Section2 */
+    border-right: 1px solid gray;
+    display: flex;
+    flex-direction: row;
+}
+
+.navsec2item {/*Nav Section 2 items */
+    text-decoration: none;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(102, 102, 102);
+    font-size: 13px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-top: 8px;
+
+}
+.home{
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+}
+
+.fa-solid {
+    /* Nav bar icons*/
+    font-size: 20px;
+}
+
+.navsec2item:hover {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+
+}
+
+/* Nav Section2 Ends */
+
+.sec3 {/*Nav section3  */
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+.profilelogo {
+    /* Nav section 3 user profile logo */
+    border: 1px solid rebeccapurple;
+    border-radius: 50px;
+    height: 25px;
+}
+
+.navsec3item {
+    /*Navbar section3 items */
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+.navsec3item:hover {
+    color: black;
+}
+
+#premium {/* Premium Link*/
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    margin-left: 30px;
+    width: 150px;
+    font-size: 13px;
+    text-align: center;
+    color: rgb(197, 127, 9);
+}
+
+#premium:hover {
+    color: rgb(54, 42, 22);
+}
+/*Nav Section Ends */
+
+/* Main Part starts  */
+.main {
+    /* border: 1px solid black; */
+    height: 100vh;
+    padding: 80px 170px 0 170px;
+    display: grid;
+    grid-template-columns: 250px 550px 280px;
+    justify-content: space-evenly;
+}
+
+/*Left panel Start */
+.leftpanel {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.profile_sec {/* Left Panel profile section*/
+    border: 1px solid rgb(220, 218, 218);
+    height: 380px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.theme { /*profile section theme color*/
+    background-image: url(./Images/background.jpg);
+    height: 80px;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.theme::after {  /*Profile picture added*/
+    content: " ";
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    position: absolute;
+    margin-top: 40px;
+    background-image: url(./Images/Profile\ image.png);
+    background-size: cover;
+    margin-left: 80px; 
+    cursor: pointer;
+}
+
+.profile_info{ /*Name & details*/
+    border-bottom: 1px solid rgb(220, 218, 218);
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.profile_info:hover{ /*hover effect for profile Name */
+    cursor: pointer;
+}
+.texthead{ 
+    color: grey;
+    font-size: 12px;
+}
+
+
+.info{ /*all details boxes */
+    /* border: 1px solid red; */
+    padding: 2px 10px;
+    display: grid;
+    grid-template-columns: 200px 90px;
+    border-bottom: 1px solid rgb(220, 218, 218);
+}
+.connections{ 
+    border: none;
+    padding-top: 10px;
+}
+.btext{ 
+    font-size: 12px;
+    font-weight: 600;
+}
+.info:hover{ /*hover effect for left panel- profile sec - item connection & profile viewers*/
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.myitems:hover{ /*hover effect for left panel- profile sec - "item My connection"*/
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+    padding: 8px 10px;
+}
+.info>.numb{
+    color: blue;
+}
+
+.profileviews>.viewprofile{
+    font-size: 15px;  
+    
+}
+.premiumtools {
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid rgb(220, 218, 218);
+}
+.myitems{
+    padding: 8px 10px;
+    font-size: 13px;
+    /* border: 1px solid red; */
+}
+.fa-bookmark{
+    font-size: 15px;
+}/*Left Panel profile section End*/
+
+.box2{   /*Left Panel box2 start */
+    border: 1px solid rgb(220, 218, 218);
+    height: 320px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: white;
+    position: sticky;
+    top: 80px;
+}
+.recent{ /* left panel - second box - recent info*/
+    padding: 10px;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+}
+.recent>p{ /* left panel - box2 - recent info- all p tags*/
+    color: grey;
+    font-size: 12px;
+}
+.recent>p:hover{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.recent>span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.groups{  /* left panel - box2 - groups*/
+    padding: 10px;
+    font-size: 12px;
+    color:grey;
+   
+}
+.phead:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Hashtags:hover{
+    cursor: pointer;
+    background-color:  rgb(235, 235, 235);
+}
+.phead{
+    color: blue;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.fa-user-group{
+    font-size: 12px;
+    color: grey;
+}
+.followed_hashtags{
+    padding: 10px;
+}
+.Hashtags{ /* left panel - box2 - followed hashtags*/
+    line-height: 15px;
+    font-size: 13px;
+    color:  grey;
+}/*Left Panel- box2 End */
+/*Left panel End (Line: 157 to 310)*/
+
+
+
+
+
+.middlepanel { /*Middle Panel*/
+    /* background-color: white; */
+    border-radius: 10px;
+}
+.postfeed{ /*Middle Panel - Posting Section */
+    width: 100%;
+    /* height: 100px; */
+    border:  1px solid rgb(220, 218, 218);
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 0;
+}
+.postsection{ /*Middle panel - positng section - input tab */
+    /* border: 1px solid black; */
+    padding: 10px;
+    display: flex;
+    
+}
+.postsection img:hover{
+    cursor: pointer;
+}
+.postsection> img,input{ /*Middle panel - positng section + input tab */
+    border-radius: 50px;
+    border:  1px solid rgb(233, 233, 233);
+}
+.postsection> input{ 
+    height: 40px;
+    margin: 5px;
+    width: 100%;
+    padding: 15px;
+}
+.multimedia { /*Middle panel - positng section - Multimedia input tab photo/video */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    color: #878787;
+} 
+.multimedia a{/*Hover effect*/
+    padding: 5px;
+}
+.multimedia a:hover{/*Hover effect*/
+    background-color: rgb(235, 235, 235); 
+    cursor: pointer;
+}
+/*Middle Panel - Posting Section End*/
+
+.post1{ /*Middle panel - feed post1 */
+    border:  1px solid rgb(220, 218, 218);
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    height: 460px;
+
+    
+}
+.post1 .post1head{ /*post1- head*/
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+}
+.post1 .post1head img{ /*post 1 -head- logo*/
+    height: 50px;
+    /* border: 1px solid red; */
+
+}
+.post1head img:hover{
+    cursor: pointer;
+}
+
+.myntra {
+    padding: 6px 0 0 5px;
+    width: 450px;
+}
+.myntra a{
+    line-height: 15px;
+    text-decoration: none;
+}
+.myntra a:hover{
+    text-decoration: underline;
+}
+.myntra p{
+    color: #878787;
+    font-size: 10px;
+    line-height: 11px;
+}
+.dotmenu{ /* 3 dot icon horizontal*/
+    /* margin-left: 320px; */
+
+    right: 2px;
+    margin-top: 2px;
+    padding: 4px 6px;
+    height: 70%;
+}
+.dotmenu:hover{ /* 3 dot icon horizontal - hover effect*/
+    cursor: pointer;
+    background-color: rgb(235, 235, 235); 
+    border-radius: 50px;
+}
+.post1image{ /*post 1 background image*/
+    background-image: url(./Images/Demo\ post\ image.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.achievement{ /*acheivements - like, love clap*/
+    padding: 0px 6px 5px 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.achievement img{
+    height: 20px;   
+}
+.achievement span{
+    font-size: 12px;
+    color: #878787;  
+}
+.reactions{ /*like comment share option*/
+    border-top:  1px solid rgb(220, 218, 218);
+    font-size: 20px;
+    padding: 5px 15px;
+    color: rgb(123, 123, 123);
+    font-size: 15px;
+}
+.achievement img:hover{
+    cursor: pointer;
+}
+.achievement span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(10, 102, 194);
+}
+.react{ /*like comment share option*/
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+} 
+.react:hover{
+    background-color: rgb(235, 235, 235); 
+    cursor: pointer;
+}
+
+
+/*Middle panel - feed post1 - End*/
+
+.post2{  /*Middle panel - feed post2*/
+    border:  1px solid rgb(220, 218, 218);
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    /* height: 550px; */
+}
+.post2 .post2head{ /*post1- head*/
+    font-size: 15px;
+    padding: 20px;
+    display: flex;
+}
+.post2 .post2head img{ /*post 1 -head- logo*/
+    height: 50px;
+    width: 40px;
+    /* border: 1px solid red; */
+}
+.post2head img:hover{
+    cursor: pointer;
+}
+.dhiraj {
+    padding: 6px 0 0 8px;
+    /* border: 1px solid red; */
+    width: 450px;
+
+}
+.dhiraj a{
+    line-height: 15px;
+    text-decoration: none;
+}
+.dhiraj a:hover{
+    text-decoration: underline;
+}
+.dhiraj p{
+    color: #878787;
+    font-size: 10px;
+    line-height: 11px;
+}
+.post2>p{
+    padding: 15px;
+    line-height: 18px;
+}
+video{
+    width: 100%;
+}
+/*Middle panel - feed post2 End*/
+/*Middle Panel Ends*/
+
+/*Right Panel Start */
+.rightpanel {  
+    background-color:transparent;
+    border-radius: 10px;
+}
+.news{ /*Right Panel - Box1 */
+    border: 1px solid rgb(220, 218, 218);
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+.rightpanel p{ /*Right Panel All p tags*/
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.fa-circle-info{ /*Right panel info icon*/
+    font-size: 13px;
+}
+.fa-circle-info:hover{
+    cursor: pointer;
+}
+.rightpanel ul{ /*Right panel all list items*/
+    font-size: 12px;
+    padding: 5px 0px 0px 20px;
+    font-weight: 600;
+}
+ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.rightpanel span{ /*right panel span tags*/
+    font-size: 11px;
+    color: rgb(150, 149, 149)
+} /*Right Panel - Box 1 End */
+
+.courses{ /*Right Panel - Box 2 */
+    border: 1px solid rgb(220, 218, 218);
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}/*Right Panel - Box 2 End */
+
+
+.follow_option{ /*Right  Panel - Box 3 */
+    border: 1px solid rgb(220, 218, 218);
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 10px;
+    margin-top: 10px;
+    position: sticky;
+    top: 80px;
+}
+.follow_option .feed{  /*Right Panel- box 3 - Padding added*/
+    padding: 10px;
+}
+.company{ /*Three companies*/
+    border-bottom: 1px solid rgb(220, 218, 218);
+    display: flex;
+    height: 80px;
+
+}
+.myntra{
+    border-bottom: none;
+}
+.company a{ /*Right panel - box3 - all anchor tags property*/
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+    width: 100px;
+    padding: 1.5px;
+
+}
+img{
+    height: 40px;
+}
+
+.company img:hover{
+    cursor: pointer;
+}
+.company p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.company a:hover{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235); 
+}
+.logoimg{
+    padding: 8px;
+   
+}
+.brand{ /* Name of company*/
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*Right  Panel - Box 3 Ends */
+/*Right Panel Ends*/
